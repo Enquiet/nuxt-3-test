@@ -1,0 +1,1 @@
+export const KEY_API: string = 'mVqf48dGDjVTgxXguZZjRkfZVCtIr3g8HuHseFyQ99Y'

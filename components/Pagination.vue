@@ -35,7 +35,7 @@
   const countPage = ref(59)
   const pages = reactive([])
 
-  const computedPagination = computed(() => {
+  const computedPagination = computed(():number[] => {
     // для красивой пагинации
     switch(true) {
       case currentPage.value < 5:
@@ -72,7 +72,7 @@
       line-height: 60px;
       color: #FFFFFF;
       cursor: pointer;
-      margin-right: 14px;
+      margin-right: 12px;
 
       &.is-active {
         font-weight: 700;

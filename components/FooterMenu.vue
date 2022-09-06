@@ -17,7 +17,7 @@
     bottom: 0;
     background: #000000;
     opacity: 0.9;
-    padding: 18px;
+    padding: 18px 10px 18px 18px;
 
     &__wrapper {
       display: flex;

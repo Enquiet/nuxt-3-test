@@ -12,11 +12,12 @@
       <din class="product-price__amount">{{ amount }}</din>
     </div>
     <div class="product-price__price">
-      {{ price }} руб.
+      {{ priceFormat }} руб.
     </div>
   </div>
 </template>
 <script setup lang="ts">
+  import numberFormat from '~~/helpers/numberFormat';
   import { ref, computed, toRefs } from 'vue'
   const emit = defineEmits(['add-product', 'away-amount'])
   const props = defineProps({
@@ -29,6 +30,8 @@
 
   const amount = ref(0);
   const notAdded = computed(():boolean  => amount.value === 0);
+
+  const priceFormat = computed(():string => numberFormat(price.value))
 
   const onClickAddAmount = () => {
     amount.value++
